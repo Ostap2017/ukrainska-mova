@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Українська мова: правила</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Onest:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+  <span class="brand">Мова.ua</span>
+  <div class="themes" role="group" aria-label="Тема сайту">
+    <button data-t="light" aria-pressed="false">Світла</button>
+    <button data-t="dark" aria-pressed="false">Темна</button>
+    <button data-t="kalyna" aria-pressed="false">Калина</button>
+  </div>
+</div>
+
+<header class="hero">
+  <h1>Українська мова</h1>
+  <p class="lead">Шкільний курс української мови для 5–11 класів: звуки, слово, частини мови, дефіс, правопис, синтаксис і пунктуація. Наприкінці — тест.</p>
+  <div class="letters" role="group" aria-label="Літери, яких немає в інших мовах">
+    <button aria-pressed="false" data-l="Ґ">Ґ</button>
+    <button aria-pressed="false" data-l="Є">Є</button>
+    <button aria-pressed="false" data-l="І">І</button>
+    <button aria-pressed="false" data-l="Ї">Ї</button>
+  </div>
+  <p id="letterInfo" class="muted" aria-live="polite">Торкніться літери, щоб дізнатися, як вона працює.</p>
+  <nav class="jump" aria-label="Розділи">
+    <a href="#alphabet">Алфавіт</a><a href="#basics">Звуки і слова</a><a href="#rules">Правопис</a><a href="#parts">Частини мови</a><a href="#cases">Відмінки</a><a href="#hyphen">Дефіс</a><a href="#ne">Не</a><a href="#syntax">Синтаксис</a><a href="#errors">Помилки</a><a href="#quiz">Тест</a>
+  </nav>
+</header>
+
+<main>
+<h2 id="alphabet">Алфавіт</h2>
+<p>В українському алфавіті 33 літери. Виділено ті, що відрізняють його від російської.</p>
+<div class="alpha" id="alpha" aria-label="Літери алфавіту"></div>
+<p class="muted">Апостроф (’) літерою не є, але він теж частина правопису.</p>
+
+<h2 id="rules">Правопис</h2>
+<details><summary>Апостроф</summary><div>
+<p>Пишемо після <b>б, п, в, м, ф, р</b> перед <b>я, ю, є, ї</b>:</p>
+<p><span class="ex">м’ясо</span><span class="ex">п’ять</span><span class="ex">дзв’якнути</span><span class="ex">бур’ян</span><span class="ex">пір’я</span></p>
+<p>Також після префіксів, що закінчуються на приголосний: <span class="ex">з’їзд</span><span class="ex">під’їзд</span>. Не пишемо, якщо перед губним стоїть інший приголосний: <span class="ex">свято</span><span class="ex">цвях</span>.</p>
+</div></details>
+<details><summary>М’який знак</summary><div>
+<p>Пишемо після <b>д, т, з, с, ц, л, н</b>, коли вони м’які: <span class="ex">кінь</span><span class="ex">дзьоб</span><span class="ex">сьогодні</span><span class="ex">різьба</span>.</p>
+<p>У суфіксах <b>-ськ-, -цьк-, -зьк-</b>: <span class="ex">український</span><span class="ex">козацький</span>.</p>
+<p>Не пишемо після <b>б, п, в, м, ф, г, к, х, ж, ч, ш, р</b>: <span class="ex">ніч</span><span class="ex">душ</span><span class="ex">говір</span>.</p>
+</div></details>
+<details><summary>Чергування голосних о, е — і</summary><div>
+<p>У закритому складі з’являється <b>і</b>, у відкритому — <b>о</b> або <b>е</b>:</p>
+<p><span class="ex">стіл — стола</span><span class="ex">ніч — ночі</span><span class="ex">піч — печі</span><span class="ex">кінь — коня</span></p>
+</div></details>
+<details><summary>Милозвучність: у/в та і/й</summary><div>
+<p><b>У / в.</b> Після приголосного ставимо «у», після голосного — «в»: <span class="ex">Він у школі</span><span class="ex">Вона в школі</span>.</p>
+<p><b>І / й.</b> Між приголосними — «і», між голосним і приголосним — «й»: <span class="ex">тато і мама</span><span class="ex">мама й тато</span>.</p>
+</div></details>
+<details><summary>Велика та мала літера</summary><div>
+<p>З великої: <span class="ex">Україна</span><span class="ex">Київ</span><span class="ex">Тарас</span><span class="ex">Різдво</span>.</p>
+<p>З малої: <span class="ex">українець</span><span class="ex">українська мова</span><span class="ex">жовтень</span><span class="ex">понеділок</span>.</p>
+</div></details>
+
+<h2 id="cases">Відмінки</h2>
+<p>В українській мові сім відмінків, і єдина відмінність від російської — кличний, який використовують для звертання.</p>
+<div class="scroll"><table>
+<tr><th>Відмінок</th><th>Питання</th><th>Книга</th></tr>
+<tr><td>Називний</td><td>хто? що?</td><td>книга</td></tr>
+<tr><td>Родовий</td><td>кого? чого?</td><td>книги</td></tr>
+<tr><td>Давальний</td><td>кому? чому?</td><td>книзі</td></tr>
+<tr><td>Знахідний</td><td>кого? що?</td><td>книгу</td></tr>
+<tr><td>Орудний</td><td>ким? чим?</td><td>книгою</td></tr>
+<tr><td>Місцевий</td><td>на кому? на чому?</td><td>на книзі</td></tr>
+<tr><td>Кличний</td><td>звертання</td><td>книго!</td></tr>
+</table></div>
+
+<h2 id="errors">Типові помилки</h2>
+<p>Більшість із них — кальки з російської. Українською природніше так:</p>
+<div class="scroll"><table>
+<tr><th>Замість</th><th>Кажіть</th></tr>
+<tr><td class="bad">приймати участь</td><td class="good">брати участь</td></tr>
+<tr><td class="bad">на протязі дня</td><td class="good">протягом дня</td></tr>
+<tr><td class="bad">в залежності від</td><td class="good">залежно від</td></tr>
+<tr><td class="bad">слідуючий</td><td class="good">наступний</td></tr>
+<tr><td class="bad">міроприємство</td><td class="good">захід</td></tr>
+<tr><td class="bad">більш краще</td><td class="good">краще</td></tr>
+</table></div>
+
+<h2 id="basics">Звуки і слова</h2>
+<details><summary>Фонетика</summary><div>
+<p>В українській мові 38 звуків: <b>6 голосних</b> (а, е, и, і, о, у) і <b>32 приголосних</b>. Літер більше: 10 голосних, 22 приголосні та м’який знак.</p>
+<p>Приголосні бувають дзвінкі й глухі (б — п, д — т, з — с), тверді й м’які. Букви <b>я, ю, є, ї</b> після приголосного дають один звук, а на початку слова — два: <span class="ex">Я [йа]</span><span class="ex">мяч → м’яч [м'ач]</span>.</p>
+</div></details>
+<details><summary>Будова слова</summary><div>
+<p>Частини слова: <b>корінь</b>, <b>префікс</b> (перед коренем), <b>суфікс</b> (після кореня), <b>закінчення</b> (змінюється).</p>
+<p><span class="ex">під·вік·онн·я</span> — префікс під-, корінь -вік-, суфікс -онн-, закінчення -я.</p>
+</div></details>
+<details><summary>Словотвір</summary><div>
+<p>Способи творення слів: префіксальний (<span class="ex">прибіг</span>), суфіксальний (<span class="ex">учитель</span>), префіксально-суфіксальний (<span class="ex">підвіконня</span>), складання (<span class="ex">землетрус</span>), абревіація (<span class="ex">ЗСУ</span>).</p>
+</div></details>
+<details><summary>Лексика</summary><div>
+<p><b>Синоніми</b> мають близьке значення (<span class="ex">сміливий — відважний</span>), <b>антоніми</b> — протилежне (<span class="ex">добрий — злий</span>), <b>омоніми</b> звучать однаково, але значать різне (<span class="ex">коса</span>: заплетене волосся й знаряддя).</p>
+<p>Фразеологізми — сталі вислови: <span class="ex">бити байдики</span>, <span class="ex">водити за носа</span>.</p>
+</div></details>
+<details><summary>Стилі мови</summary><div>
+<p><b>Розмовний</b> (щоденне спілкування), <b>науковий</b> (терміни, точність), <b>офіційно-діловий</b> (заяви, накази), <b>публіцистичний</b> (стаття, виступ), <b>художній</b> (образність), <b>конфесійний</b> (релігія).</p>
+</div></details>
+
+<h2 id="parts">Частини мови</h2>
+<div class="scroll"><table>
+<tr><th>Частина</th><th>Питання</th><th>Приклад</th></tr>
+<tr><td>Іменник</td><td>хто? що?</td><td>книга, Київ</td></tr>
+<tr><td>Прикметник</td><td>який?</td><td>гарний</td></tr>
+<tr><td>Числівник</td><td>скільки? котрий?</td><td>п’ять, п’ятий</td></tr>
+<tr><td>Займенник</td><td>указує на особу чи ознаку</td><td>я, цей, ніхто</td></tr>
+<tr><td>Дієслово</td><td>що робити?</td><td>читати</td></tr>
+<tr><td>Прислівник</td><td>як? де? коли?</td><td>швидко</td></tr>
+<tr><td>Прийменник, сполучник, частка</td><td>службові слова</td><td>у, і, не</td></tr>
+<tr><td>Вигук</td><td>передає почуття</td><td>ой! ах!</td></tr>
+</table></div>
+<p class="muted">Перші шість — самостійні частини мови. Дієприкметник і дієприслівник — особливі форми дієслова.</p>
+
+<h2 id="hyphen">Дефіс</h2>
+<p>Дефіс (-) з’єднує частини слова. Він коротший за тире (—), яке відокремлює слова в реченні.</p>
+<details><summary>Складні слова та іменники</summary><div>
+<p>Прикметники з рівноправними частинами: <span class="ex">кисло-солодкий</span><span class="ex">соціально-економічний</span><span class="ex">українсько-англійський</span><span class="ex">жовто-блакитний</span>.</p>
+<p>Іменник + іменник, що позначають одне поняття: <span class="ex">інженер-механік</span><span class="ex">диван-ліжко</span><span class="ex">жар-птиця</span>.</p>
+<p>Подвійні прізвища: <span class="ex">Нечуй-Левицький</span><span class="ex">Карпенко-Карий</span>.</p>
+</div></details>
+<details><summary>Прислівники з по-</summary><div>
+<p><span class="ex">по-українськи</span><span class="ex">по-нашому</span><span class="ex">по-різному</span>, а також порядкові: <span class="ex">по-перше</span><span class="ex">по-друге</span><span class="ex">по-третє</span>.</p>
+</div></details>
+<details><summary>Частки й подвоєння</summary><div>
+<p>Через дефіс: <span class="ex">будь-хто</span><span class="ex">будь-який</span><span class="ex">хто-небудь</span><span class="ex">казна-що</span>.</p>
+<p>Частка <b>-сь</b> пишеться разом: <span class="ex">хтось</span><span class="ex">десь</span><span class="ex">якийсь</span>.</p>
+<p>Повтор слова: <span class="ex">ледве-ледве</span><span class="ex">тихо-тихо</span><span class="ex">синій-синій</span>.</p>
+</div></details>
+
+<h2 id="ne">Не з різними частинами мови</h2>
+<div class="scroll"><table>
+<tr><th>Частина</th><th>Разом</th><th>Окремо</th></tr>
+<tr><td>Дієслово</td><td>ненавидіти, нездужати</td><td>не знаю, не читав</td></tr>
+<tr><td>Іменник</td><td>недруг, негода, невдача</td><td>не друг, а ворог</td></tr>
+<tr><td>Прикметник</td><td>невеликий (= малий)</td><td>не великий, а малий</td></tr>
+<tr><td>Прислівник</td><td>неправильно, нещодавно</td><td>не правильно, а хибно</td></tr>
+</table></div>
+<p class="muted">Разом пишемо, якщо слово без «не» не вживається або «не» + слово можна замінити синонімом. Окремо — коли є протиставлення («не..., а...»).</p>
+
+<h2 id="syntax">Синтаксис і розділові знаки</h2>
+<details><summary>Члени речення</summary><div>
+<p><b>Підмет</b> (хто? що?) — одна суцільна риска. <b>Присудок</b> — дві. <b>Означення</b> (який?) — хвиляста. <b>Додаток</b> (кого? чого?) — пунктир. <b>Обставина</b> (де? коли? як?) — штрихпунктир.</p>
+</div></details>
+<details><summary>Однорідні члени</summary><div>
+<p>Кома між однорідними членами без сполучника і перед «а, але, проте»: <span class="ex">Ліс, поле, річка.</span><span class="ex">Він малий, але сильний.</span></p>
+<p>Перед одиничним «і» коми немає: <span class="ex">хліб і сіль</span>. Якщо «і» повторюється, кома є: <span class="ex">і ліс, і поле</span>.</p>
+</div></details>
+<details><summary>Звертання та вставні слова</summary><div>
+<p>Виділяємо комами: <span class="ex">Мамо, куди ти йдеш?</span><span class="ex">Звичайно, я прийду.</span><span class="ex">На жаль, він запізнився.</span></p>
+</div></details>
+<details><summary>Складні речення</summary><div>
+<p>Між простими частинами завжди ставимо кому: <span class="ex">Я знаю, що ти прийдеш.</span><span class="ex">Сонце зайшло, і стало темно.</span></p>
+<p><b>Складносурядне</b> — частини рівноправні (і, а, але). <b>Складнопідрядне</b> — є головна й підрядна частини (що, щоб, який, коли, бо). <b>Безсполучникове</b> — без сполучників.</p>
+</div></details>
+<details><summary>Пряма мова</summary><div>
+<p>«Я прийду», — сказав він.</p>
+<p>Він сказав: «Я прийду».</p>
+</div></details>
+
+<h2 id="quiz">Перевірте себе</h2>
+<div class="quiz" id="quizBox"></div>
+</main>
+
+<footer>Правила подано за чинним правописом 2019 року у спрощеному вигляді.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
