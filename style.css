@@ -58,3 +58,9 @@ th{color:var(--muted);font-weight:600;font-size:.9rem}
 #fb{min-height:3em;margin:.8rem 0 0}
 footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Широкі екрани: меню в кілька рядків, без горизонтальної прокрутки */
+@media (min-width:640px){
+  nav.jump{flex-wrap:wrap;overflow-x:visible}
+  html{scroll-padding-top:calc(7rem + env(safe-area-inset-top,0px))}
+}
