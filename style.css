@@ -5,7 +5,7 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0C1830;--surface:#13233F;--ink:#E9EFF8;--muted:#9DB0CB;--accent:#F4C430;--accent2:#5C9BFF;--on:#0C1830;--line:#25395A}
 :root[data-theme="kalyna"]{--bg:#FBF1F1;--surface:#fff;--ink:#3A1620;--muted:#7A4A55;--accent:#A8203A;--accent2:#2E7D5B;--on:#fff;--line:#EBCFD3}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:12px;scroll-behavior:smooth}
+html{scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px));scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Onest,system-ui,-apple-system,"Segoe UI",sans-serif;transition:background .25s,color .25s}
 .wrap{max-width:46rem;margin:0 auto;padding:1rem 1.1rem 3rem}
 h1,h2{font-family:Lora,Georgia,serif;line-height:1.15;margin:0}
@@ -26,7 +26,8 @@ h1{font-size:clamp(2.4rem,11vw,4.2rem);font-weight:700}
 .letters button{font:700 clamp(3rem,17vw,5rem)/1 Lora,Georgia,serif;width:1.25em;height:1.25em;border:2px solid var(--line);background:var(--surface);color:var(--accent);border-radius:14px;cursor:pointer;display:grid;place-items:center;transition:border-color .15s,transform .15s}
 .letters button[aria-pressed="true"]{border-color:var(--accent2);transform:translateY(-4px)}
 #letterInfo{min-height:3.2em;margin:.4rem 0 0}
-nav.jump{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.6rem 0 0}
+nav.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;gap:.5rem;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;margin:0 -1.1rem;padding:.6rem 1.1rem;background:var(--bg);border-bottom:1.5px solid var(--line);transition:background .25s}
+nav.jump a{flex:none;white-space:nowrap}
 nav.jump a{text-decoration:none;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:.35rem .9rem;border-radius:999px;font-size:.95rem}
 nav.jump a:hover{border-color:var(--accent)}
 .alpha{display:grid;grid-template-columns:repeat(auto-fill,minmax(3.1rem,1fr));gap:.4rem}
